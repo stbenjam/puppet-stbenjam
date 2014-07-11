@@ -7,6 +7,7 @@ class stbenjam (
   $shell_binary    = $stbenjam::params::shell_binary,
   $shell_package   = $stbenjam::params::shell_package,
   $packages        = $stbenjam::params::packages,
+  $private         = $stbenjam::params::private,
 ) inherits stbenjam::params { 
 
 
@@ -16,6 +17,12 @@ class stbenjam (
   class { 'stbenjam::user': } -> 
   class { 'stbenjam::git': } ->
   class { 'stbenjam::vim': } ->
-  class { 'stbenjam::screen': } 
+  class { 'stbenjam::screen': } ->
+  class { 'stbenjam::selecta': }
 
+  if ($private) {
+    class { 'stbenjam::private':
+      require => Class['stbenjam::selecta'],
+    }
+  }
 }

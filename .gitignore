@@ -1,1 +1,3 @@
+manifests/private/*
+files/private/*
 pkg/*

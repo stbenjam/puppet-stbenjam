@@ -9,7 +9,7 @@ class stbenjam::screen {
     owner   => $stbenjam::username,
     group   => $stbenjam::username,
     mode    => '0644',
-    source  => 'puppet:///modules/stbenjam/screenrc',
+    source  => 'puppet:///modules/stbenjam/junk-drawer/dotfiles/screenrc',
   }
 
 }

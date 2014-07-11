@@ -1,0 +1,6 @@
+[submodule "files/junk-drawer"]
+	path = files/junk-drawer
+	url = https://github.com/stbenjam/junk-drawer.git
+[submodule "files/selecta"]
+	path = files/selecta
+	url = https://github.com/garybernhardt/selecta

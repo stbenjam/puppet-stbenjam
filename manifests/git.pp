@@ -5,16 +5,10 @@ class stbenjam::git {
     owner   => $stbenjam::username,
     group   => $stbenjam::username,
     mode    => '0644',
-    source  => 'puppet:///modules/stbenjam/gitconfig',
+    source  => 'puppet:///modules/stbenjam/junk-drawer/dotfiles/gitconfig',
   }
 
   class { 'git::install': } ->
-
-  git::repo { 'junk-drawer':
-    target      => "$stbenjam::home/junk-drawer",
-    source      => 'https://github.com/stbenjam/junk-drawer.git',
-    user        => $stbenjam::username,
-  } ->
 
   git::repo { 'vundle':
     target      => "$stbenjam::home/.vim/bundle/Vundle.vim",

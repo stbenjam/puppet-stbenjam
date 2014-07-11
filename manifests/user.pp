@@ -21,7 +21,7 @@ class stbenjam::user {
     owner   => $stbenjam::username,
     group   => $stbenjam::username,
     mode    => '0644',
-    source  => 'puppet:///modules/stbenjam/zshrc',
+    source  => 'puppet:///modules/stbenjam/junk-drawer/dotfiles/zshrc',
   }
 
 

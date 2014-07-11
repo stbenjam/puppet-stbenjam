@@ -17,7 +17,7 @@ class stbenjam::vim {
     owner   => $stbenjam::username,
     group   => $stbenjam::username,
     mode    => '0644',
-    source  => 'puppet:///modules/stbenjam/vimrc',
+    source  => 'puppet:///modules/stbenjam/junk-drawer/dotfiles/vimrc',
   }
 
   exec { "install_plugins":
