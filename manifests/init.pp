@@ -15,6 +15,7 @@ class stbenjam (
     ensure => installed,
   } ->
   class { 'stbenjam::user': } -> 
+  class { 'stbenjam::bin': } -> 
   class { 'stbenjam::git': } ->
   class { 'stbenjam::vim': } ->
   class { 'stbenjam::screen': } ->
