@@ -21,8 +21,8 @@ class stbenjam::vim {
   }
 
   exec { "install_plugins":
-    command     => "/bin/sudo /bin/su $stbenjam::username /bin/bash --login -c \"vim +:PluginInstall +:q! +q! && touch $stbenjam::home/.installed_plugins\"",
-    subscribe   => File["$stbenjam::home/.vimrc"]
+    command     => "/bin/sudo /bin/su $stbenjam::username /bin/bash --login -c \"vim +:PluginInstall +:qall\"",
+    subscribe   => File["$stbenjam::home/.vimrc"],
     refreshonly => true
   }
 

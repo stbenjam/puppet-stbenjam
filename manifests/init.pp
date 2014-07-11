@@ -18,8 +18,7 @@ class stbenjam (
   class { 'stbenjam::bin': } -> 
   class { 'stbenjam::git': } ->
   class { 'stbenjam::vim': } ->
-  class { 'stbenjam::screen': } ->
-  class { 'stbenjam::selecta': }
+  class { 'stbenjam::screen': } 
 
   if ($private) {
     class { 'stbenjam::private':
