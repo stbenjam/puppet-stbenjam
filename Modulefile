@@ -1,5 +1,5 @@
 name    'stbenjam-stbenjam'
-version '0.4.0'
+version '0.4.1'
 author  'stbenjam'
 license 'MIT'
 summary 'Configures a box to my liking'

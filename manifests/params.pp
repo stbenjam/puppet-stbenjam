@@ -1,8 +1,6 @@
 class stbenjam::params {
 
-  $packages        = [ 'vim-enhanced',
-                       'screen',
-                       'mosh' ]
+  $packages        = [ 'mosh' ]
 
   $username        = 'stbenjam'
   $password        = '$6$WB0bjeIt$8oZQdqULpChRfqu.sYPdaDq4pnSsl6kxaGI2hejeiQCu/PyG/Qp3ZD.aSwA.AFH19Jilc/DuMflGDmgwkcibu1'
