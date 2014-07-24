@@ -12,6 +12,21 @@ class stbenjam::vim {
     ensure  => installed,
   } ->
 
+  file { ["$stbenjam::home/.vim", "$stbenjam::home/.vim/colors"]:
+    ensure  => directory,
+    owner   => $stbenjam::username,
+    group   => $stbenjam::username,
+    mode    => '0755',
+  } ->
+
+  file { "$stbenjam::home/colors/solarized.vim":
+    ensure  => present,
+    owner   => $stbenjam::username,
+    group   => $stbenjam::username,
+    mode    => '0644',
+    source  => 'puppet:///modules/stbenjam/vim-colors-solarized/colors/solarized.vim',
+  } ->
+
   file { "$stbenjam::home/.vimrc":
     ensure  => present,
     owner   => $stbenjam::username,
@@ -21,7 +36,7 @@ class stbenjam::vim {
   }
 
   exec { "install_plugins":
-    command     => "/bin/sudo /bin/su $stbenjam::username /bin/bash --login -c \"vim +:PluginInstall +:qall\"",
+    command     => "/usr/bin/sudo /bin/su $stbenjam::username /bin/bash --login -c \"vim +:PluginInstall +:qall\"",
     subscribe   => File["$stbenjam::home/.vimrc"],
     refreshonly => true
   }

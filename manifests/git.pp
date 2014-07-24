@@ -20,6 +20,6 @@ class stbenjam::git {
     target      => "$stbenjam::home/.oh-my-zsh",
     source      => 'https://github.com/robbyrussell/oh-my-zsh.git',
     user        =>  $stbenjam::username,
-  } 
+  }
 
 }
